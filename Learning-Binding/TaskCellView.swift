@@ -10,17 +10,36 @@ import RealmSwift
 
 struct TaskCellView: View {
     @ObservedRealmObject var selectedTask: Task
+    @Environment(\.realm) var realm
+    
     var body: some View {
-        VStack(alignment: .leading) {
-            Toggle(isOn: $selectedTask.isCompleted) {
-                Text("\(selectedTask.title)").font(.subheadline)
-                Text(selectedTask.priority.rawValue)
-                    .padding(6)
-                    .frame(width: 75)
-                    .background(priorityBackground(priority: selectedTask.priority))
-                    .foregroundColor(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
-            }
+        HStack() {
+//            Toggle(isOn: $selectedTask.isCompleted) {
+//                Text("\(selectedTask.title)").font(.subheadline)
+//                Text(selectedTask.priority.rawValue)
+//                    .padding(6)
+//                    .frame(width: 75)
+//                    .background(priorityBackground(priority: selectedTask.priority))
+//                    .foregroundColor(.white)
+//                    .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
+//            }
+            
+            Image(systemName: selectedTask.isCompleted ? "checkmark.square":"square")
+                .onTapGesture {
+                    try! realm.write {
+                        selectedTask.thaw()!.isCompleted.toggle()
+                    }
+                    
+                }
+            Text("\(selectedTask.title)").font(.subheadline)
+            Spacer()
+            Text(selectedTask.priority.rawValue)
+                .padding(6)
+                .frame(width: 75)
+                .background(priorityBackground(priority: selectedTask.priority))
+                .foregroundColor(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
+            
             
         }
     }

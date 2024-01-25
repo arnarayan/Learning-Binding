@@ -34,6 +34,13 @@ struct TodoListView: View {
                         
                         ForEach(filteredTask, id: \.id) { selectedTask in
                             TaskCellView(selectedTask: selectedTask)
+                        }.onDelete { indexSet in
+                            
+                            indexSet.forEach { index in
+                                let task = filteredTask[index]
+                                $savedEntities.remove(task)
+                            }
+                            
                         }
                     } header: {
                         Text(sec.rawValue)
@@ -41,6 +48,10 @@ struct TodoListView: View {
             }
         }.listStyle(.plain)
     }
+    
+//    func removeTask(at offsets: IndexSet) {
+//        $savedEntities.remove(<#T##object: Results<Task>.Element##Results<Task>.Element#>)
+//    }
 }
 
 
