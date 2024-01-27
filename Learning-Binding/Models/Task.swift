@@ -16,4 +16,5 @@ public class Task: Object, ObjectKeyIdentifiable {
     @Persisted var title: String = ""
     @Persisted var isCompleted: Bool = false
     @Persisted var priority: PriorityEnum = PriorityEnum.medium
+    @Persisted var notes: List<Note> = List<Note>()
 }

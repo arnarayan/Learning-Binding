@@ -20,6 +20,8 @@
 		00B1D93C2B5C7E7A00778076 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1D93B2B5C7E7A00778076 /* Task.swift */; };
 		00D6156B2B5F727E0061BFEC /* SectionsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6156A2B5F727E0061BFEC /* SectionsEnum.swift */; };
 		00D6156D2B5F72D20061BFEC /* PriorityEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6156C2B5F72D20061BFEC /* PriorityEnum.swift */; };
+		00EEAA0C2B64EB4C00DB411A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEAA0B2B64EB4C00DB411A /* Note.swift */; };
+		00EEAA0E2B64F23600DB411A /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEAA0D2B64F23600DB411A /* NotesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		00B1D93B2B5C7E7A00778076 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		00D6156A2B5F727E0061BFEC /* SectionsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsEnum.swift; sourceTree = "<group>"; };
 		00D6156C2B5F72D20061BFEC /* PriorityEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityEnum.swift; sourceTree = "<group>"; };
+		00EEAA0B2B64EB4C00DB411A /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		00EEAA0D2B64F23600DB411A /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 				00B1237F2B595BEC001716EF /* Assets.xcassets */,
 				00B123812B595BEC001716EF /* Preview Content */,
 				00B123892B596038001716EF /* SettingsRowView.swift */,
+				00EEAA0D2B64F23600DB411A /* NotesView.swift */,
 			);
 			path = "Learning-Binding";
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				00B1D93B2B5C7E7A00778076 /* Task.swift */,
+				00EEAA0B2B64EB4C00DB411A /* Note.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,6 +204,8 @@
 				003BE2EA2B5FF0C000751429 /* TodoListView.swift in Sources */,
 				00B1237E2B595BEA001716EF /* ContentView.swift in Sources */,
 				00B1D9392B5C7CC500778076 /* RealmManager.swift in Sources */,
+				00EEAA0C2B64EB4C00DB411A /* Note.swift in Sources */,
+				00EEAA0E2B64F23600DB411A /* NotesView.swift in Sources */,
 				00B1D93C2B5C7E7A00778076 /* Task.swift in Sources */,
 				00B1237C2B595BEA001716EF /* Learning_BindingApp.swift in Sources */,
 				00B1238A2B596038001716EF /* SettingsRowView.swift in Sources */,

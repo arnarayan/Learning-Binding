@@ -31,6 +31,10 @@ class RealmManager: ObservableObject {
             if ((subs.first(named: "all-tasks")) == nil) {
                 subs.append(QuerySubscription<Task>(name: "all-tasks"))
             }
+            
+            if ((subs.first(named: "all-notes")) == nil) {
+                subs.append(QuerySubscription<Note>(name: "all-notes"))
+            }
         }, rerunOnOpen: true)
         
         realm = try! await Realm(configuration: configuration!, downloadBeforeOpen: .always)
