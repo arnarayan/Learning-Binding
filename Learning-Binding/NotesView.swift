@@ -16,7 +16,7 @@ struct NotesView: View {
     //@Environment(\.realm) var realm
     
     var body: some View {
-        VStack {
+        VStack{
             TextField("Note", text: $notes)
             Button {
                 
@@ -32,10 +32,10 @@ struct NotesView: View {
             List {
                 ForEach(task.notes) { note in
                     Text(note.text)
-                }.onDelete(perform: $task.notes.remove)
+                }.onDelete(perform: $task.notes.remove).listStyle(.plain)
             }
             
-        }
+        }.padding().navigationTitle(task.title)
     }
 }
 

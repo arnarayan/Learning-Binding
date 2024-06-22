@@ -17,6 +17,15 @@
         "branch" : "master",
         "revision" : "32beae1d9793b8ebbe900952993f8d611a538975"
       }
+    },
+    {
+      "identity" : "reswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReSwift/ReSwift.git",
+      "state" : {
+        "revision" : "cb5c3c02f652420ef413dea41e13ac5a76b6c0fd",
+        "version" : "6.1.1"
+      }
     }
   ],
   "version" : 2

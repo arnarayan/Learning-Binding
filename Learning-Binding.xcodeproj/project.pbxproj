@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0018CE682C1424DC00A63767 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0018CE672C1424DC00A63767 /* Store.swift */; };
+		0018CE6B2C14C65300A63767 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0018CE6A2C14C65300A63767 /* ReSwift */; };
 		003BE2EA2B5FF0C000751429 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003BE2E92B5FF0C000751429 /* TodoListView.swift */; };
 		003BE2EC2B5FFD6900751429 /* TaskCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003BE2EB2B5FFD6900751429 /* TaskCellView.swift */; };
 		00B1237C2B595BEA001716EF /* Learning_BindingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1237B2B595BEA001716EF /* Learning_BindingApp.swift */; };
@@ -25,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0018CE672C1424DC00A63767 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		003BE2E92B5FF0C000751429 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		003BE2EB2B5FFD6900751429 /* TaskCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellView.swift; sourceTree = "<group>"; };
 		00B123782B595BEA001716EF /* Learning-Binding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learning-Binding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0018CE6B2C14C65300A63767 /* ReSwift in Frameworks */,
 				00B1D9362B5C7C6E00778076 /* RealmSwift in Frameworks */,
 				00B1D9342B5C7C6E00778076 /* Realm in Frameworks */,
 			);
@@ -54,6 +58,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0018CE662C14249000A63767 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				0085FEAC2C253C960086B55E /* reducers */,
+				0018CE672C1424DC00A63767 /* Store.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		0085FEAC2C253C960086B55E /* reducers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = reducers;
+			sourceTree = "<group>";
+		};
 		00B1236F2B595BEA001716EF = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +93,7 @@
 		00B1237A2B595BEA001716EF /* Learning-Binding */ = {
 			isa = PBXGroup;
 			children = (
+				0018CE662C14249000A63767 /* Redux */,
 				00D615692B5F72640061BFEC /* Enums */,
 				00B1D93A2B5C7E6800778076 /* Models */,
 				00B1D9372B5C7CB400778076 /* Managers */,
@@ -141,6 +162,7 @@
 			packageProductDependencies = (
 				00B1D9332B5C7C6E00778076 /* Realm */,
 				00B1D9352B5C7C6E00778076 /* RealmSwift */,
+				0018CE6A2C14C65300A63767 /* ReSwift */,
 			);
 			productName = "Learning-Binding";
 			productReference = 00B123782B595BEA001716EF /* Learning-Binding.app */;
@@ -172,6 +194,7 @@
 			mainGroup = 00B1236F2B595BEA001716EF;
 			packageReferences = (
 				00B1D9322B5C7C6E00778076 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				0018CE692C14C65300A63767 /* XCRemoteSwiftPackageReference "ReSwift" */,
 			);
 			productRefGroup = 00B123792B595BEA001716EF /* Products */;
 			projectDirPath = "";
@@ -202,6 +225,7 @@
 				00D6156D2B5F72D20061BFEC /* PriorityEnum.swift in Sources */,
 				00D6156B2B5F727E0061BFEC /* SectionsEnum.swift in Sources */,
 				003BE2EA2B5FF0C000751429 /* TodoListView.swift in Sources */,
+				0018CE682C1424DC00A63767 /* Store.swift in Sources */,
 				00B1237E2B595BEA001716EF /* ContentView.swift in Sources */,
 				00B1D9392B5C7CC500778076 /* RealmManager.swift in Sources */,
 				00EEAA0C2B64EB4C00DB411A /* Note.swift in Sources */,
@@ -412,6 +436,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0018CE692C14C65300A63767 /* XCRemoteSwiftPackageReference "ReSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReSwift/ReSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		00B1D9322B5C7C6E00778076 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
@@ -423,6 +455,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0018CE6A2C14C65300A63767 /* ReSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0018CE692C14C65300A63767 /* XCRemoteSwiftPackageReference "ReSwift" */;
+			productName = ReSwift;
+		};
 		00B1D9332B5C7C6E00778076 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 00B1D9322B5C7C6E00778076 /* XCRemoteSwiftPackageReference "realm-swift" */;

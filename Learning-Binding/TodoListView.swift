@@ -11,6 +11,7 @@ import RealmSwift
 struct TodoListView: View {
     
     @ObservedResults var savedEntities: Results<Task>
+    @ObservedResults var savedNotes: Results<Note>
     @Environment(\.realm) var realm
     
     var pendingTasks: [Task] {
@@ -40,7 +41,13 @@ struct TodoListView: View {
                             indexSet.forEach { index in
                                 let task = filteredTask[index]
                                 
+                                for note in task.notes {
+                                    $savedNotes.remove(note)
+                                }
+                                
                                 $savedEntities.remove(task)
+                                
+
                                 
                                 
                             }
